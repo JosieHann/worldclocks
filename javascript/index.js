@@ -11,6 +11,7 @@ function updateTime() {
     );
   }
 }
+
 let losAngelesElement = document.querySelector("#los-angeles");
 if (losAngelesElement) {
   let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -44,8 +45,8 @@ function updateCity(event) {
   `;
 }
 
-updateTime();
 setInterval(updateTime, 1000);
+updateTime();
 
 let citiesSelectElement = document.querySelector("#city");
-citiesSelectElement.addEventListener("change", updateCity);
+citiesSelectElement.addEventListener("change", updateCity, updateTime);

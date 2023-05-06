@@ -26,6 +26,7 @@ h2 {
 }
 .city:last-child {
   border: none;
+  padding-bottom: 5px;
 }
 .time {
   font-size: 36px;
@@ -40,9 +41,13 @@ select {
   display: block;
   width: 100%;
   padding: 7px;
-  border-radius: 4px;
+  border-radius: 4px black;
   font-size: large;
   background-color: rgba(240, 229, 229, 0.7);
+}
+option {
+  background-color: rgb(165, 159, 159, 0.5);
+  color: rgb(0, 0, 0);
 }
 .container {
   max-width: 600px;

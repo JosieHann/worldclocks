@@ -1,4 +1,15 @@
 function updateTime() {
+  let PasadenaElement = document.querySelector("#pasadena");
+  if (PasadenaElement) {
+    let PasadenaDateElement = PasadenaElement.querySelector(".date");
+    let PasadenaTimeElement = PasadenaElement.querySelector(".time");
+    let PasadenaTime = moment().tz("America/Pasadena");
+
+    PasadenaDateElement.innerHTML = PasadenaTime.format("MMMM	Do YYYY");
+    PasadenaTimeElement.innerHTML = PasadenaTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
   let SydneyElement = document.querySelector("#sydney");
   if (SydneyElement) {
     let SydneyDateElement = SydneyElement.querySelector(".date");
@@ -15,11 +26,11 @@ function updateTime() {
 let losAngelesElement = document.querySelector("#los-angeles");
 if (losAngelesElement) {
   let losAngelesDateElement = losAngelesElement.querySelector(".date");
-  let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
+  let losAngelesTimeElement = losAngelesElement.querySelector(".time");
   let losAngelesTime = moment().tz("America/Los_Angeles");
 
   losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-  lostAngelesTimeElement.innerHTML = losAngelesTime.format(
+  losAngelesTimeElement.innerHTML = losAngelesTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 }

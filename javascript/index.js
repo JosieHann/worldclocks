@@ -1,12 +1,12 @@
 function updateTime() {
-  let PasadenaElement = document.querySelector("#pasadena");
-  if (PasadenaElement) {
-    let PasadenaDateElement = PasadenaElement.querySelector(".date");
-    let PasadenaTimeElement = PasadenaElement.querySelector(".time");
-    let PasadenaTime = moment().tz("America/Pasadena");
+  let SydneyElement = document.querySelector("#sydney");
+  if (SydneyElement) {
+    let SydneyDateElement = SydneyElement.querySelector(".date");
+    let SydneyTimeElement = SydneyElement.querySelector(".time");
+    let SydneyTime = moment().tz("Australia/Sydney");
 
-    PasadenaDateElement.innerHTML = PasadenaTime.format("MMMM	Do YYYY");
-    PasadenaTimeElement.innerHTML = PasadenaTime.format(
+    SydneyDateElement.innerHTML = SydneyTime.format("MMMM	Do YYYY");
+    SydneyTimeElement.innerHTML = SydneyTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
